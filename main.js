@@ -170,7 +170,7 @@ search  = function(){
             }
         }
 }
-getSearch.addEventListener("ontouchstart", (e) => {
+getSearch.addEventListener("touchstart", (e) => {
     search();
 })
 getSearch.addEventListener("keydown", (e) => { 
