@@ -162,7 +162,7 @@ darkMode.onclick = function(){
 
 let getSearch = document.querySelector(".container form input");
 getSearch.addEventListener("keydown", (e) => { 
-    if(e.key === "Enter" || e.key === "Go"){
+    if(e.key === "Enter"){
         e.preventDefault();
         let a = getSearch.value;
         for(let i = 0; i < arrName.length; i++){
