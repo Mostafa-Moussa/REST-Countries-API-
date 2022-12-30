@@ -159,15 +159,22 @@ darkMode.onclick = function(){
     body.classList.toggle("dark_mode");
 }
 let getSearch = document.querySelector(".container form input");
-getSearch.addEventListener("keydown", (e) => { 
-    if(e.key === "Enter"){
-        e.preventDefault();
-        let a = getSearch.value;
+search  = function(){
+    let a = getSearch.value;
         for(let i = 0; i < arrName.length; i++){
             if(arrName[i] === a) {
+                storeData();
                 window.localStorage.setItem("index", i);
                 window.open("page3.html", "_self");
             }
         }
+}
+getSearch.addEventListener("touchstart", (e) => {
+    search();
+})
+getSearch.addEventListener("keydown", (e) => { 
+    if(e.key === "Enter"){
+        e.preventDefault();
+        search();
     }
 });
