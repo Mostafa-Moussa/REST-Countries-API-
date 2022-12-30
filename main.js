@@ -170,7 +170,8 @@ search  = function(){
             }
         }
 }
-getSearch.addEventListener("touchstart", (e) => {
+document.onkeyup = function(e){ console.log(e); }
+getSearch.addEventListener("click", (e) => {
     search();
 })
 getSearch.addEventListener("keydown", (e) => { 
