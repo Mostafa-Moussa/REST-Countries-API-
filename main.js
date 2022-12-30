@@ -159,12 +159,9 @@ let body = document.querySelector("body");
 darkMode.onclick = function(){
     body.classList.toggle("dark_mode");
 }
-
 let getSearch = document.querySelector(".container form input");
-getSearch.addEventListener("keydown", (e) => { 
-    if(e.key === "Enter"){
-        e.preventDefault();
-        let a = getSearch.value;
+search  = function(){
+    let a = getSearch.value;
         for(let i = 0; i < arrName.length; i++){
             if(arrName[i] === a) {
                 storeData();
@@ -172,6 +169,14 @@ getSearch.addEventListener("keydown", (e) => {
                 window.open("page3.html", "_self");
             }
         }
+}
+getSearch.addEventListener("ontouchstart", (e) => {
+    search();
+})
+getSearch.addEventListener("keydown", (e) => { 
+    if(e.key === "Enter"){
+        e.preventDefault();
+        search();
     }
 });
 storeData = function(){
