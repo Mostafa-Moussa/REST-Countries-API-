@@ -3,6 +3,16 @@ let jsDetails = JSON.parse(jsonData);
 window.localStorage.setItem("data", "");
 
 let x = window.localStorage.getItem("index");
+if(typeof(x) === "string"){
+    for(let c = 0; c < 250; c++){
+        if(jsDetails.name[c] === x){
+            x = c;
+        }
+    }
+    if(typeof(x) === "number"){
+        window.open("index.html", "_self");
+    }
+}
 
 let countSpace = document.createElement("div");
 let container = document.querySelector(".container");
