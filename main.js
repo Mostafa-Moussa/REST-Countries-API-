@@ -163,6 +163,7 @@ let getSearch = document.querySelector(".container form input");
 search  = function(a){
     console.log("a in search");
         for(let i = 0; i < arrName.length; i++){
+            console.log(i);
             if(arrName[i] === a) {
                 console.log("arrName[i] === a");
                 storeData();
