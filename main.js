@@ -170,7 +170,10 @@ search  = function(){
             }
         }
 }
-document.onkeyup = function(e){ console.log(e); }
+document.onkeydown = function(e){
+    e.preventDefault();
+    console.log(e);
+}
 getSearch.addEventListener("click", (e) => {
     search();
 })
