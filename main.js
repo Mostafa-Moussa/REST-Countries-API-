@@ -161,8 +161,10 @@ darkMode.onclick = function(){
 }
 let getSearch = document.querySelector(".container form input");
 search  = function(a){
+    console.log("a in search");
         for(let i = 0; i < arrName.length; i++){
             if(arrName[i] === a) {
+                console.log("arrName[i] === a");
                 storeData();
                 window.localStorage.setItem("index", i);
                 window.open("page3.html", "_self");
@@ -172,6 +174,7 @@ search  = function(a){
 getSearch.addEventListener("keydown", (e) => { 
     if(e.key === "Enter"){
         let a = getSearch.value;
+        console.log(a);
         e.preventDefault();
         search(a);
     }
