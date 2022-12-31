@@ -170,15 +170,16 @@ search  = function(){
             }
         }
 }
-document.onkeydown = function(e){
-    e.preventDefault();
-    console.log(e);
-}
-getSearch.addEventListener("click", (e) => {
-    search();
-})
+// document.onkeydown = function(e){
+//     e.preventDefault();
+//     console.log(e);
+// }
+// getSearch.addEventListener("click", (e) => {
+//     search();
+// })
 getSearch.addEventListener("keydown", (e) => { 
     if(e.key === "Enter"){
+        console.log(getSearch.value);
         e.preventDefault();
         search();
     }
