@@ -180,7 +180,7 @@ search  = function(){
 getSearch.addEventListener("keydown", (e) => { 
     if(e.key === "Enter"){
         console.log(getSearch.value);
-        e.preventDefault();
+        //e.preventDefault();
         search();
     }
 });
