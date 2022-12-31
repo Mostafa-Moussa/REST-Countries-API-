@@ -163,7 +163,7 @@ search  = function(a){
     console.log(a);
     for(let i = 0; i < arrName.length; i++){
         console.log(arrName[i], a);
-        if(arrName[i] === a) {
+        if(arrName[i] == a) {
             console.log("a is in if")
             window.localStorage.setItem("index", i);
             storeData();
