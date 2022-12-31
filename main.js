@@ -160,22 +160,19 @@ darkMode.onclick = function(){
 }
 let getSearch = document.querySelector(".container form input");
 search  = function(a){
-    console.log("a in search");
-        for(let i = 0; i < arrName.length; i++){
-            console.log(i);
-            if(arrName[i] === a) {
-                console.log("arrName[i] === a");
-                storeData();
-                window.localStorage.setItem("index", i);
-                window.open("page3.html", "_self");
-                break;
-            }
+    window.localStorage.setItem("index", a);
+    for(let i = 0; i < arrName.length; i++){
+        if(arrName[i] === a) {
+            window.localStorage.setItem("index", i);
+            break;
         }
+    }
+    storeData();
+    window.open("page3.html", "_self");
 }
 getSearch.addEventListener("keydown", (e) => { 
     if(e.key === "Enter"){
         let a = getSearch.value;
-        console.log(a);
         e.preventDefault();
         search(a);
     }
