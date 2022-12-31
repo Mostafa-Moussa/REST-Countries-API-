@@ -79,7 +79,6 @@ requestData = function(){
                     arrBorders.push("Not available");
                 }
             }
-            console.log(jsData);
             setMainData();
             newPage();
             newFilter();
@@ -169,6 +168,7 @@ search  = function(a){
                 storeData();
                 window.localStorage.setItem("index", i);
                 window.open("page3.html", "_self");
+                break;
             }
         }
 }
