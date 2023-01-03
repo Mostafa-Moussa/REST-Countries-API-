@@ -161,7 +161,7 @@ darkMode.onclick = function(){
 let getSearch = document.querySelector(".container form input");
 search  = function(a){
     for(let i = 0; i < arrName.length; i++){
-        console.log(typeof(arrName[i], arrName[i], typeof(a), a);
+        console.log(typeof(arrName[i]), arrName[i], typeof(a), a);
         if(arrName[i].toLowerCase() === a) {
             window.localStorage.setItem("index", i);
             storeData();
