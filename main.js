@@ -31,9 +31,7 @@ requestData = function(){
                 arrTobLevelDomain.push(jsData[i].tld);
 
                 if(i !== 53){
-                    let nameCurrObjects = jsData[i].name.nativeName;
-                    let nameCurrKeys = Object.keys(nameCurrObjects);
-                    arrNativeName.push(jsData[i].name.nativeName[nameCurrKeys[0]].official);
+                    arrNativeName.push(jsData[i].name.official);
                 }else{
                     arrNativeName.push("Not available");
                 }
